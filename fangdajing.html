@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			.start{background:#333}
+			.box{height:40px;margin:0 auto;width:1140px;overflow:hidden;}
+			.left{width:418.59px;height:40px;float:left;}
+			.left ul li{float:left;list-style:none;line-height:40px;}
+			.left ul li a{font-size:12px;color: #b0b0b0;text-decoration:none;}
+			.left ul li .sep{margin: 0 .5em;color: #424242;}
+			.right{width:200px;height:40px;float:right;}
+			.right ul li{float:left;list-style:none;line-height:40px;margin:0 10px;}
+			.right ul li a{text-decoration:none;color:#b0b0b0;font-size:12px;}
+			.right ul li img{height:20px;width:20px;margin-top:3px;}
+			
+			.box1{height:50px;width:1140px;margin:0 auto;position: sticky;top:0;z-index: 20;background:whitesmoke;}
+			.box1 .b-left{height:50px;width:161px;float:left}
+			.box1 .b-left img{height:28px;width:112px;margin:11px 24.5px;}
+			.box1 ul {float:right;line-height:50px;margin-right:115px;position:relative;position:relative;}
+			.box1 ul li{float:left;width:72px;height:50px;list-style:none;text-align:center;}
+			.box1 ul li a{font-size:15px;color: #767676;text-decoration: none;display:inline-block}
+			.cd{height:310px;width:1140px;position:absolute;left:-161px;top:50px;z-index:100;display:none;background:white}
+			.box1 ul li:hover .cd{display:block;}
+			.box1 ul li:hover{background:white;}
+			.box1 ul li:hover a{color:red}
+			.cd1{height:260px;width:190px;float:left;text-align:center;}
+			.cd1 dl{}
+			.cd1 dt{height:160px;width:160px;margin-left:15px;}
+			.cd1 dt img{width:100%}
+			.cd1 dl dd{line-height:30px;}
+			.one{font-size:17px;color:black}
+			.two{font-size:13px;color:gray;}
+			.red{color:red;font-size:13px;}
+			
+			.border{height:30px;width:1140px;margin:30px auto;}
+			.border ul li{list-style:none;float:left;line-height:30px;font-size:13px;color:black;}
+			.border .border-1{color:gray;}
+			.section{height:540px;width:1140px;margin:0 auto;}
+			.nav{height:420px;width:72px;float:left;margin-top:60px;}
+			.nav li{height:66px;width:66px;list-style:none;margin-left:2px;margin-top:15px;border:1px solid gray;}
+			.nav li img{width:100%}
+			.nav li:hover{border:1px solid red}
+			
+			.container-magnifier{ width: 500px; margin-left:20px;position: relative;background:black;float:left;}
+			.wrap-small-magnifier{ width: 500px;height: 450px;border: 1px solid #ddd;border:1px solid #222222}
+			.wrap-small-magnifier .patch{width: 100%; height: 100%;position: absolute; top: 0;left: 0;z-index: 7;}
+			.wrap-small-magnifier .focus{width: 300px;height: 300px;background:  white;opacity: 0.0;position: absolute; left: 0;top: 0;display: none;}
+			.wrap-small-magnifier img{width:100%;height:100%;}
+			.wrap-big-magnifier{box-sizing: border-box;width: 500px;height: 450px;position: absolute; top: 0;overflow: hidden;border: 1px solid #ddd;display: none;}
+			.wrap-big-magnifier img{position: absolute;left: 0;top: 0;}
+			.article{height:336px;width:475px;float:right;}
+			.article h3{height:22px;margin-bottom:15px}
+			.article h4{height:20px;font-size:14px;color:#333;}
+			.had{height:34px;width:445px;margin-top:10px;}
+			.had ul{display:flex;justify-content: space-between;}
+			.had li{list-style: none;line-height:34px;font-size:22px;color:red;}
+			.had .tp{font-size:12px;margin-bottom:20px;position:relative;}
+			.tp1{height:120px;width:120px;position: absolute;top:34px;left:-42px;display:none;background:white;}
+			.had .tp .tp1 img{width:100%;}
+			.had .tp:hover .tp1{display:block;}
+			.footer{height:50px;width:445px;}
+			.footer li{float:left;list-style:none;margin-right:10px;line-height:50px;color:#424242}
+			.footer .select{color:black;position: relative;}
+			.select1{height:334px;width:475px;background: papayawhip;position: absolute;top:50px;left:-293px;
+						display:none}
+			.footer .select:hover .select1{display:block;}
+			.height{height:40px;width:190px;background:red;margin:100px 30px 0 0;float:left;text-align:center;line-height:40px;color:white;}
+			.width{height:40px;width:190px;background:yellow;float:left;margin-top:100px;text-align:center;line-height:40px;color:white;}
+			
+			
+			
+			</style>
+	</head>
+	<body>
+		<div class = 'start'>
+		<div class="box">
+			<div class = 'left'>
+				<ul>
+					<li><a href="<a href="news.html">康佳新闻</a><span class="sep">|</span></li>
+					<li><a href="<a href="http://sc.hotjob.cn/wt/konka/web/index">加入康佳</a><span class="sep">|</span></li>
+					<li><a href="<a href="https://campus.konka.com/nb/minisite/konka/index.html">校园招聘</a><span class="sep">|</span></li>
+					<li><a href="<a href="http://bbs.konka.com/">康佳社区</a><span class="sep">|</span></li>
+					<li><a href="<a href="prucahse.html">大宗采购</a><span class="sep">|</span></li>
+					<li><a href="<a href="integralmall.html">积分商城</a><span class="sep">|</span></li>
+				</ul>
+			</div>		
+			<div class = 'right'>
+				<ul>
+					<li><a href="">登录</a></li>
+					<li><a href="zhuce.html">注册</a></li>
+					<li><img src="19.png" ><a href="">购物车</a></li>
+				</ul>
+			</div>	
+		</div>
+		</div>
+			
+		<div class = 'box1'>
+			<div class = 'b-left'>
+				<img src="https://www.konka.com/themes/pc/konka/images/logo.png?v7e12">
+			</div>	
+				<ul>
+					<li><a href="1.html">首页</a>
+					
+					</li>
+					<li><a href="">电视</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">冰箱</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">洗衣机</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">手机</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">生活电器</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">智能家居</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">智能硬件</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">K迷优品</a>
+					<div class = 'cd'>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+						<div class = 'cd1'>
+							<dl>
+								<dt><a href=""><img src="32.jpg" ></a></dt>
+								<dd class = 'one'>E75U 75时超薄</dd>
+								<dd class = 'two'>金属人工智能</dd>
+								<dd class = 'red'>￥7399.00</dd>
+							</dl>
+						</div>
+					</div></li>
+					<li><a href="">大宗采购</a></li>
+					<li><a href="">服务</a></li>
+					<li><img src = 'fdj.png'></li>
+				</ul>
+				
+		</div>
+		
+		<div class = 'border'>
+			<ul>
+				<li>电视 ></li>
+				<li>4k电视 ></li>
+				<li class = 'border-1'>E75U 75时超薄金属  巨屏新品E75U</li>
+			</ul>
+		</div>
+			<div class = 'section'>
+				<div class ="nav">
+					<ul>
+						<li><img src="35.jpg"></li>
+						<li><img src="36.jpg"></li>
+						<li><img src="37.jpg"></li>
+						<li><img src="38.jpg"></li>
+						<li><img src="39.jpg"></li>
+					</ul>
+				</div>
+				<div class="container-magnifier">
+				      <div class="wrap-small-magnifier">
+				            <img src="40.jpg" alt="">
+				            <div class="focus"></div>
+				            <div class="patch"></div>
+				      </div>
+					  <div class="wrap-big-magnifier">
+						            <img src="41.jpg" alt="">
+					  </div>
+				</div>
+				<script>
+				var focus = document.querySelector(".focus");
+				      var big_wrap = document.querySelector(".wrap-big-magnifier");
+				      var small_wrap = document.querySelector(".wrap-small-magnifier");
+				
+				      var big_bg = big_wrap.children[0];
+				      var prop = parseInt(getComputedStyle(big_wrap)["width"]) / parseInt(getComputedStyle(focus)["width"]);
+				      
+				      big_bg.style.width = prop * small_wrap.offsetWidth + "px";
+				      big_bg.style.height = prop * small_wrap.offsetHeight + "px";
+				      small_wrap.addEventListener("mouseenter" , toggle.bind(false,"show"));
+				      small_wrap.addEventListener("mouseleave" , toggle.bind(false,"hide"));
+				
+				      function toggle(type){ 
+				            var display = null;
+				            if(type === "show"){
+				                  display = "block";
+				            }else{
+				                  display = "none";
+				            }
+				            focus.style.display = display;
+				            big_wrap.style.display = display;
+				      }
+				
+				      small_wrap.addEventListener("mousemove",eleMove)
+				
+				      function eleMove(evt){
+				            var e = evt || window.event;
+				            var _left = e.offsetX;
+				            var _top = e.offsetY;
+				            _left = _left - focus.offsetWidth / 2 ;
+				            _top = _top - focus.offsetHeight / 2;
+				            _left = _left <= 0 ? 0 : _left;
+				            _top = _top <= 0 ? 0 : _top;
+				            var maxLeft = small_wrap.offsetWidth - focus.offsetWidth;
+				            var maxTop =  small_wrap.offsetHeight - focus.offsetHeight;
+				            _left = _left >= maxLeft ? maxLeft : _left;
+				            _top = _top >= maxTop ? maxTop : _top;
+				            focus.style.left = _left + "px";
+				            focus.style.top = _top  + "px";
+				            big_bg.style.left = -_left * prop + "px";
+				            big_bg.style.top = -_top * prop + "px";
+				      }     
+				
+				
+				
+				
+				</script>
+				           
+				<div class = 'article'>
+					<h3>E75U 75时超薄金属  巨屏新品</h3>
+					<h4>金属人工智能 2GB+16GB HDR 4K超高清液晶智能</h4>
+				  <div class = 'had'>
+					<ul>
+					<li>￥8399.00</li>
+					<li class = 'tp'>手机购买
+					<div class = 'tp1'>
+						<img src="二维码.png" >
+					</div></li>
+					</ul>
+				  </div>
+				  <div class = 'footer'>
+				  						 <ul>
+				  						 	<li>配送至:</li>
+				  						 	<li>北京</li>
+				  						 	<li>北京市</li>
+				  						 	<li>延庆县</li>
+				  						 	<li>珍珠泉乡</li>
+				  						 	<li class = 'select'>^&nbsp;&nbsp;有货
+											<div class = 'select1'>
+												
+												
+											</div>
+											</li>
+											
+				  						 </ul>
+				  </div>
+				  
+				  <div class = 'height'>立即购买</div>
+				  <div class = 'width'>加入购物车</div>
+				</div> 
+					 
+		</div>
+		
+	</body>
+</html>
